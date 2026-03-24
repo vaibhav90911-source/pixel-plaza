@@ -5,33 +5,54 @@ import Footer from "@/components/Footer";
 
 const ranks = [
   {
-    name: "VIP",
-    price: "$4.99",
+    name: "ELITE",
+    price: "₹40",
     color: "text-green-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(74,222,128,0.3)]",
-    perks: ["Colored name in chat", "/fly in lobby", "3 /sethome slots", "Access to /hat", "VIP kit (daily)", "Priority queue"],
+    perks: ["Colored name in chat", "/fly in lobby", "3 /sethome slots", "Access to /hat", "Elite kit (daily)", "Priority queue"],
   },
   {
-    name: "MVP",
-    price: "$9.99",
+    name: "CHAMPION",
+    price: "₹80",
     color: "text-blue-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(96,165,250,0.3)]",
-    perks: ["All VIP perks", "/nick command", "Particle effects", "5 /sethome slots", "MVP kit (daily)", "/feed command", "Join full servers"],
+    perks: ["All Elite perks", "/nick command", "Particle effects", "5 /sethome slots", "Champion kit (daily)", "/feed command", "Join full servers"],
   },
   {
-    name: "ELITE",
-    price: "$19.99",
+    name: "IMMORTAL",
+    price: "₹250",
     color: "text-purple-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(192,132,252,0.3)]",
-    popular: true,
-    perks: ["All MVP perks", "Custom chat tag", "Pet system access", "10 /sethome slots", "Elite kit (daily)", "/heal command", "/ec (enderchest)", "Exclusive cosmetics"],
+    perks: ["All Champion perks", "Custom chat tag", "Pet system access", "10 /sethome slots", "Immortal kit (daily)", "/heal command", "/ec (enderchest)"],
   },
   {
-    name: "LEGEND",
-    price: "$34.99",
+    name: "DEADLIEST",
+    price: "₹500",
+    color: "text-red-400",
+    borderClass: "hover:shadow-[0_0_15px_rgba(248,113,113,0.3)]",
+    popular: true,
+    perks: ["All Immortal perks", "Exclusive cosmetics", "15 /sethome slots", "Deadliest kit (daily)", "/fix command", "Custom join message", "Beta access to new features"],
+  },
+  {
+    name: "ACE",
+    price: "₹999",
     color: "text-yellow-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(250,204,21,0.3)]",
-    perks: ["All ELITE perks", "Legend chat channel", "Monthly legendary crate", "Unlimited /sethome", "Legend kit (daily)", "/fix command", "Custom join message", "All cosmetics unlocked", "Beta access to new features"],
+    perks: ["All Deadliest perks", "Ace chat channel", "Monthly legendary crate", "Unlimited /sethome", "Ace kit (daily)", "All cosmetics unlocked", "/fly in survival"],
+  },
+  {
+    name: "BOSS",
+    price: "₹1,499",
+    color: "text-orange-400",
+    borderClass: "hover:shadow-[0_0_15px_rgba(251,146,60,0.3)]",
+    perks: ["All Ace perks", "Boss chat channel", "Weekly beast crate", "Boss kit (daily)", "Custom particle trails", "/god mode (PvE)", "Priority support"],
+  },
+  {
+    name: "GOD",
+    price: "₹1,999",
+    color: "text-primary",
+    borderClass: "hover:shadow-[0_0_20px_rgba(233,69,96,0.4)]",
+    perks: ["All Boss perks", "God chat channel", "Monthly beast crate x3", "God kit (daily)", "Exclusive God cosmetics", "Custom chat color", "Server suggestion priority", "All future perks included"],
   },
 ];
 
@@ -48,7 +69,7 @@ const RanksPage = () => (
           <p className="text-muted-foreground max-w-xl mx-auto">Choose the rank that fits your playstyle. All ranks are permanent and one-time purchases.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {ranks.map((rank) => (
             <div
               key={rank.name}

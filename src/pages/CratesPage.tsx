@@ -1,35 +1,35 @@
-import { Key, Gift, Star, Zap } from "lucide-react";
+import { Key, Flame, Star, Skull } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const crates = [
   {
-    name: "Common Crate",
-    icon: Gift,
-    color: "text-muted-foreground",
-    glowClass: "",
-    keyPrice: "$0.99",
-    description: "Basic rewards to get you started.",
-    loot: ["16 Diamonds", "Iron Armor Set", "32 Golden Apples", "5,000 In-game Coins", "Common Cosmetic"],
-  },
-  {
-    name: "Rare Crate",
-    icon: Star,
-    color: "text-blue-400",
-    glowClass: "hover:shadow-[0_0_20px_rgba(96,165,250,0.3)]",
-    keyPrice: "$2.49",
-    description: "Better rewards with exclusive items.",
-    loot: ["32 Diamonds", "Diamond Armor Set", "Rare Pet Egg", "25,000 In-game Coins", "Rare Cosmetic", "/fly (1 hour)"],
-  },
-  {
     name: "Legendary Crate",
-    icon: Zap,
+    icon: Star,
     color: "text-yellow-400",
     glowClass: "hover:shadow-[0_0_20px_rgba(250,204,21,0.3)]",
-    keyPrice: "$7.99",
-    description: "The rarest and most powerful rewards.",
-    loot: ["64 Diamonds", "Enchanted Netherite Set", "Legendary Pet", "100,000 In-game Coins", "Exclusive Cosmetic", "Temporary Rank Upgrade (7 days)", "Custom Chat Color"],
+    keyPrice: "₹199",
+    description: "Unlock powerful rewards from the Legendary Crate.",
+    tier: "3rd Tier",
+  },
+  {
+    name: "Inferno Crate",
+    icon: Flame,
+    color: "text-orange-400",
+    glowClass: "hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]",
+    keyPrice: "₹399",
+    description: "Blazing hot rewards await inside the Inferno Crate.",
+    tier: "2nd Tier",
+  },
+  {
+    name: "Beast Crate",
+    icon: Skull,
+    color: "text-primary",
+    glowClass: "hover:shadow-[0_0_20px_rgba(233,69,96,0.4)]",
+    keyPrice: "₹699",
+    description: "The highest valued crate with the most exclusive rewards.",
+    tier: "Top Tier",
   },
 ];
 
@@ -59,22 +59,18 @@ const CratesPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {crates.map((crate) => (
             <div key={crate.name} className={`glass rounded-xl p-6 transition-all ${crate.glowClass}`}>
-              <div className="flex items-center gap-3 mb-3">
-                <crate.icon className={`w-8 h-8 ${crate.color}`} />
-                <h2 className={`font-display text-xl font-bold ${crate.color}`}>{crate.name}</h2>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <crate.icon className={`w-8 h-8 ${crate.color}`} />
+                  <h2 className={`font-display text-xl font-bold ${crate.color}`}>{crate.name}</h2>
+                </div>
+                <span className={`text-xs font-display uppercase tracking-wider px-2 py-0.5 rounded-full bg-secondary ${crate.color}`}>
+                  {crate.tier}
+                </span>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">{crate.description}</p>
-              <h3 className="text-xs font-display uppercase tracking-wider text-foreground mb-2">Possible Loot</h3>
-              <ul className="space-y-1 mb-6">
-                {crate.loot.map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
-                    <span className={`w-1.5 h-1.5 rounded-full ${crate.color === "text-muted-foreground" ? "bg-muted-foreground" : crate.color.replace("text-", "bg-")}`} />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm text-muted-foreground mb-6">{crate.description}</p>
               <div className="flex items-center justify-between">
-                <span className="font-display text-xl font-bold text-foreground">{crate.keyPrice}<span className="text-xs text-muted-foreground font-body"> /key</span></span>
+                <span className="font-display text-2xl font-bold text-foreground">{crate.keyPrice}<span className="text-xs text-muted-foreground font-body"> /key</span></span>
                 <Button variant="neon" size="sm">Buy Key</Button>
               </div>
             </div>
