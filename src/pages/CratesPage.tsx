@@ -1,7 +1,9 @@
-import { Key, Flame, Star, Skull } from "lucide-react";
+import { Key, Flame, Star, Skull, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const DISCORD_LINK = "https://discord.gg/76zeQ4CVh5";
 
 const crates = [
   {
@@ -43,16 +45,20 @@ const CratesPage = () => (
             <Key className="inline-block w-10 h-10 mr-3 mb-1" />
             Crate Keys
           </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">Unlock crates with keys to win amazing in-game rewards. Keys can be earned in-game or purchased below.</p>
+          <p className="text-muted-foreground max-w-xl mx-auto">Unlock crates with keys to win amazing in-game rewards. Purchase keys and confirm payment on Discord.</p>
         </div>
 
+        {/* How to Purchase */}
         <div className="mb-10 glass rounded-xl p-6 max-w-2xl mx-auto">
-          <h2 className="font-display text-lg font-bold text-accent cyan-text mb-2">How It Works</h2>
+          <h2 className="font-display text-lg font-bold text-accent cyan-text mb-2 flex items-center gap-2">
+            <MessageCircle className="w-5 h-5" />
+            How to Purchase
+          </h2>
           <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
-            <li>Purchase or earn a crate key</li>
-            <li>Find the crate at <span className="font-mono text-accent">/warp crates</span></li>
-            <li>Right-click the crate with your key</li>
-            <li>Watch the animation and claim your reward!</li>
+            <li>Click <span className="font-semibold text-foreground">"Buy Key"</span> on the crate you want</li>
+            <li>You'll be redirected to our Discord server</li>
+            <li>Open a ticket and share your payment confirmation</li>
+            <li>Our team will verify and deliver your key in-game!</li>
           </ol>
         </div>
 
@@ -71,10 +77,23 @@ const CratesPage = () => (
               <p className="text-sm text-muted-foreground mb-6">{crate.description}</p>
               <div className="flex items-center justify-between">
                 <span className="font-display text-2xl font-bold text-foreground">{crate.keyPrice}<span className="text-xs text-muted-foreground font-body"> /key</span></span>
-                <Button variant="neon" size="sm">Buy Key</Button>
+                <a href={DISCORD_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button variant="neon" size="sm">Buy Key</Button>
+                </a>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Payment Info */}
+        <div className="mt-12 glass rounded-xl p-6 max-w-2xl mx-auto text-center">
+          <h3 className="font-display text-lg font-bold text-foreground mb-2">Payment Confirmation</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            After making your payment, join our Discord and open a ticket with your payment screenshot. Our team will verify and deliver your key within 24 hours.
+          </p>
+          <a href={DISCORD_LINK} target="_blank" rel="noopener noreferrer">
+            <Button variant="cyanGlow" size="lg">Join Discord to Purchase</Button>
+          </a>
         </div>
       </div>
     </main>

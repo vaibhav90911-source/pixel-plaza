@@ -3,27 +3,29 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const DISCORD_LINK = "https://discord.gg/76zeQ4CVh5";
+
 const ranks = [
   {
     name: "ELITE",
     price: "₹40",
     color: "text-green-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(74,222,128,0.3)]",
-    perks: ["Colored name in chat", "/fly in lobby", "3 /sethome slots", "Access to /hat", "Elite kit (daily)", "Priority queue"],
+    perks: ["Colored name in chat", "3 /sethome slots", "Access to /hat", "Elite kit (daily)"],
   },
   {
     name: "CHAMPION",
     price: "₹80",
     color: "text-blue-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(96,165,250,0.3)]",
-    perks: ["All Elite perks", "/nick command", "Particle effects", "5 /sethome slots", "Champion kit (daily)", "/feed command", "Join full servers"],
+    perks: ["All Elite perks", "/nick command", "Particle effects", "5 /sethome slots", "Champion kit (daily)", "/feed command"],
   },
   {
     name: "IMMORTAL",
     price: "₹250",
     color: "text-purple-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(192,132,252,0.3)]",
-    perks: ["All Champion perks", "Custom chat tag", "Pet system access", "10 /sethome slots", "Immortal kit (daily)", "/heal command", "/ec (enderchest)"],
+    perks: ["All Champion perks", "Custom chat tag", "Pet system access", "7 /sethome slots", "Immortal kit (daily)", "/heal command", "/ec (enderchest)"],
   },
   {
     name: "DEADLIEST",
@@ -31,21 +33,21 @@ const ranks = [
     color: "text-red-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(248,113,113,0.3)]",
     popular: true,
-    perks: ["All Immortal perks", "Exclusive cosmetics", "15 /sethome slots", "Deadliest kit (daily)", "/fix command", "Custom join message", "Beta access to new features"],
+    perks: ["All Immortal perks", "Exclusive cosmetics", "7 /sethome slots", "Deadliest kit (daily)", "/fix command", "Custom join message", "Beta access to new features"],
   },
   {
     name: "ACE",
     price: "₹999",
     color: "text-yellow-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(250,204,21,0.3)]",
-    perks: ["All Deadliest perks", "Ace chat channel", "Monthly legendary crate", "Unlimited /sethome", "Ace kit (daily)", "All cosmetics unlocked", "/fly in survival"],
+    perks: ["All Deadliest perks", "Ace chat channel", "Monthly legendary crate", "7 /sethome slots", "Ace kit (daily)", "All cosmetics unlocked"],
   },
   {
     name: "BOSS",
     price: "₹1,499",
     color: "text-orange-400",
     borderClass: "hover:shadow-[0_0_15px_rgba(251,146,60,0.3)]",
-    perks: ["All Ace perks", "Boss chat channel", "Weekly beast crate", "Boss kit (daily)", "Custom particle trails", "/god mode (PvE)", "Priority support"],
+    perks: ["All Ace perks", "Boss chat channel", "Weekly beast crate", "Boss kit (daily)", "Custom particle trails", "Priority support"],
   },
   {
     name: "GOD",
@@ -90,7 +92,9 @@ const RanksPage = () => (
                   </li>
                 ))}
               </ul>
-              <Button variant="neon" className="w-full">Purchase</Button>
+              <a href={DISCORD_LINK} target="_blank" rel="noopener noreferrer">
+                <Button variant="neon" className="w-full">Purchase</Button>
+              </a>
             </div>
           ))}
         </div>

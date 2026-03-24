@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Rules", path: "/rules" },
 ];
 
-const SERVER_IP = "play.yourserver.com";
+const SERVER_IP = "Inferno.play.hosting";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="font-display text-xl font-bold tracking-widest text-primary neon-text">
-          MC SERVER
+          INFERNO SMP
         </Link>
 
         {/* Desktop Nav */}
@@ -56,7 +56,7 @@ const Navbar = () => {
             {SERVER_IP}
             {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
           </button>
-          <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/76zeQ4CVh5" target="_blank" rel="noopener noreferrer">
             <Button variant="neon" size="sm">Discord</Button>
           </a>
         </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
               {SERVER_IP}
               {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
-            <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/76zeQ4CVh5" target="_blank" rel="noopener noreferrer">
               <Button variant="neon" size="sm">Discord</Button>
             </a>
           </div>

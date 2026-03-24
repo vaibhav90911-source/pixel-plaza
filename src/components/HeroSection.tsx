@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const SERVER_IP = "play.yourserver.com";
+const SERVER_IP = "Inferno.play.hosting";
 
 const HeroSection = () => {
   const [copied, setCopied] = useState(false);
@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black tracking-wider neon-text text-primary mb-6 animate-float">
-          MC SERVER
+          INFERNO SMP
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
           Join the ultimate Minecraft experience. Custom ranks, epic crates, and an incredible community await.
@@ -43,23 +43,6 @@ const HeroSection = () => {
           <Link to="/store">
             <Button variant="neon" size="lg">Visit Store</Button>
           </Link>
-        </div>
-
-        <div className="mt-12 flex items-center justify-center gap-8 text-muted-foreground text-sm">
-          <div className="text-center">
-            <div className="text-2xl font-display font-bold text-foreground">500+</div>
-            <div>Players Online</div>
-          </div>
-          <div className="w-px h-10 bg-border" />
-          <div className="text-center">
-            <div className="text-2xl font-display font-bold text-foreground">10K+</div>
-            <div>Community</div>
-          </div>
-          <div className="w-px h-10 bg-border" />
-          <div className="text-center">
-            <div className="text-2xl font-display font-bold text-foreground">99.9%</div>
-            <div>Uptime</div>
-          </div>
         </div>
       </div>
     </section>
