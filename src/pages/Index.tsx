@@ -44,7 +44,7 @@ const Index = () => (
           <Link to="/store">
             <Button variant="neon" size="lg">Visit Store</Button>
           </Link>
-          <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.gg/76zeQ4CVh5" target="_blank" rel="noopener noreferrer">
             <Button variant="cyanGlow" size="lg">Join Discord</Button>
           </a>
         </div>
