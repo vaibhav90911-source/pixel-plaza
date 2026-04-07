@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Copy, Check, ShoppingCart, User, LogOut, Shield } from "lucide-react";
+import { Menu, X, Copy, Check, ShoppingCart, User, LogOut, Shield, Package } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useCart } from "@/hooks/useCart";
 
@@ -74,6 +74,11 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center gap-2">
+              <Link to="/orders">
+                <Button variant="glass" size="icon" title="My Orders">
+                  <Package className="w-4 h-4" />
+                </Button>
+              </Link>
               {isAdmin && (
                 <Link to="/admin">
                   <Button variant="glass" size="icon" title="Admin Panel">

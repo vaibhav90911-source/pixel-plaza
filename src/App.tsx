@@ -14,6 +14,7 @@ import AuthPage from "./pages/AuthPage.tsx";
 import CartPage from "./pages/CartPage.tsx";
 import CheckoutSuccessPage from "./pages/CheckoutSuccessPage.tsx";
 import AdminPage from "./pages/AdminPage.tsx";
+import OrdersPage from "./pages/OrdersPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/auth" element={<AuthPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
+              <Route path="/orders" element={<OrdersPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
