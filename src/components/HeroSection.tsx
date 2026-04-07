@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const SERVER_IP = "Inferno.play.hosting";
+const SERVER_IP = "legacy-11.hexacraft.fun:25612";
 
 const HeroSection = () => {
   const [copied, setCopied] = useState(false);

@@ -18,7 +18,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-display text-sm font-semibold text-foreground mb-3 uppercase tracking-wider">Connect</h4>
-          <p className="text-sm text-muted-foreground mb-1">Server IP: <span className="font-mono text-accent">Inferno.play.hosting</span></p>
+          <p className="text-sm text-muted-foreground mb-1">Server IP: <span className="font-mono text-accent"><p className="text-sm text-muted-foreground mb-1">Server IP: <span className="font-mono text-accent">legacy-11.hexacraft.fun:25612</span></p></span></p>
           <a href="https://discord.gg/76zeQ4CVh5" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Join our Discord</a>
         </div>
       </div>
