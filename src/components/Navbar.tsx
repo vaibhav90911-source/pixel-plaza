@@ -74,6 +74,11 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center gap-2">
+              <Link to="/orders">
+                <Button variant="glass" size="icon" title="My Orders">
+                  <Package className="w-4 h-4" />
+                </Button>
+              </Link>
               {isAdmin && (
                 <Link to="/admin">
                   <Button variant="glass" size="icon" title="Admin Panel">
