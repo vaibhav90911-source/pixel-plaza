@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Rules", path: "/rules" },
 ];
 
-const SERVER_IP = "Inferno.play.hosting";
+const SERVER_IP = "legacy-11.hexacraft.fun:25612";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
